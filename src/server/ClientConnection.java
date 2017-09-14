@@ -35,7 +35,7 @@ public class ClientConnection implements Runnable {
                  if(stream.equals("luk ned")) {
                      done = true;
                  } else {
-                     out.println(stream);
+                     out.println(stream+" "+stream.length());
                  }
              }
          }

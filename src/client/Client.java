@@ -1,5 +1,7 @@
 package client;
 
+import server.ClientConnection;
+
 import java.io.*;
 import java.net.Socket;
 import java.net.UnknownHostException;
@@ -10,28 +12,27 @@ public class Client {
     {
         try {
             Socket s = new Socket("127.0.0.1", 8001);
-
             while (true) {
                 InputStream input = s.getInputStream();
                 OutputStream output = s.getOutputStream();
 
                 Scanner in = new Scanner(input);
 
-                PrintWriter out = new PrintWriter(output, true);
+                PrintWriter out = new PrintWriter(output,true);
 
-                String welcome = in.nextLine();
-                out.println("Welcome");
+                System.out.println(output);
 
                 //nu kan vi så sende og modtage respektivt
                 out.println("Først besked");
                 // Vi udksriver nu bare direkte
+                String message = "";
                 System.out.println(in.nextLine());
 
                 out.println("Anden besked");
                 // Vi udskriver nu bare direkte
                 System.out.println(in.nextLine());
 
-                out.println("Tredie besked");
+                out.println("Tredje besked");
                 // Vi udksriver nu bare direkte
                 System.out.println(in.nextLine());
 
