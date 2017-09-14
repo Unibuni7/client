@@ -19,7 +19,7 @@ public class Server {
 
         System.out.println("Server kører...");
         while(true) {
-            // så længe der ikke er oprettet en forbindelse, venster serveren her
+            // så længe der ikke er oprettet en forbindelse, venter serveren her
             //så snart der anmodes om en forbindelse accepteres den med accept()
             Socket incoming = ss.accept();
             System.out.println("Klient forbundet");

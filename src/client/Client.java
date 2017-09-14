@@ -20,7 +20,7 @@ public class Client {
                 PrintWriter out = new PrintWriter(output, true);
 
                 String welcome = in.nextLine();
-                out.println("Velkommen");
+                out.println("Welcome");
 
                 //nu kan vi så sende og modtage respektivt
                 out.println("Først besked");
